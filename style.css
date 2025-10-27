@@ -1,0 +1,489 @@
+/* --- Variables (Couleurs et Polices) --- */
+:root {
+    --couleur-primaire: #007bff;
+    --couleur-secondaire: #6c757d;
+    --couleur-fond: #f8f9fa;
+    --couleur-fond-alt: #ffffff;
+    --couleur-texte: #212529;
+    --couleur-bordure: #dee2e6;
+    --ombre-boite: 0 4px 12px rgba(0,0,0,0.05);
+    --font-principale: 'Arial', sans-serif;
+    --max-width: 1200px;
+}
+
+/* --- Thème Sombre (Dark Mode) --- */
+body.dark-mode {
+    --couleur-primaire: #00aaff;
+    --couleur-secondaire: #8a939b;
+    --couleur-fond: #121212;
+    --couleur-fond-alt: #1e1e1e;
+    --couleur-texte: #f1f1f1;
+    --couleur-bordure: #333;
+    --ombre-boite: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* --- Styles Globaux --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-principale);
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+h2 i {
+    margin-right: 10px;
+    color: var(--couleur-primaire);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--couleur-primaire);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--couleur-secondaire);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Sections --- */
+.section-standard {
+    padding: 60px 0;
+}
+.section-alt {
+    background-color: var(--couleur-fond-alt);
+    transition: background-color 0.3s;
+}
+
+/* --- Barre de Navigation --- */
+.navbar {
+    background-color: var(--couleur-fond-alt);
+    border-bottom: 1px solid var(--couleur-bordure);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--ombre-boite);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--couleur-texte);
+}
+
+.nav-menu a {
+    margin: 0 1rem;
+    font-weight: 500;
+    color: var(--couleur-texte);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--couleur-texte);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* --- Boutons --- */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s;
+    margin: 5px;
+}
+.btn-primary {
+    background-color: var(--couleur-primaire);
+    color: #fff;
+    border: 1px solid var(--couleur-primaire);
+}
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--couleur-primaire);
+}
+.btn-secondary {
+    background-color: transparent;
+    color: var(--couleur-secondaire);
+    border: 1px solid var(--couleur-secondaire);
+}
+.btn-secondary:hover {
+    background-color: var(--couleur-secondaire);
+    color: #fff;
+}
+
+/* 1. Accueil */
+.section-accueil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    padding: 40px 20px;
+}
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--couleur-fond-alt);
+    box-shadow: var(--ombre-boite);
+    margin-bottom: 1rem;
+}
+.section-accueil h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+.titre-metier {
+    font-size: 1.5rem;
+    color: var(--couleur-secondaire);
+    margin-bottom: 1.5rem;
+}
+
+/* 2. À propos */
+.a-propos-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.bio-text {
+    flex: 2;
+}
+.bio-photo {
+    flex: 1;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: var(--ombre-boite);
+}
+
+/* 3. Compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.skill-item {
+    background: var(--couleur-fond);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ombre-boite);
+}
+.skill-item i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--couleur-primaire);
+}
+.soft-skills-list {
+    list-style: none;
+    padding-left: 0;
+    columns: 2;
+}
+.soft-skills-list li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 25px;
+}
+.soft-skills-list li::before {
+    content: '✓';
+    color: var(--couleur-primaire);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* 4. Projets */
+.projets-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+.projet-carte {
+    background: var(--couleur-fond-alt);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--ombre-boite);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.projet-carte:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.projet-carte img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--couleur-bordure);
+}
+.projet-carte h3 {
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+}
+.projet-carte p {
+    padding: 0 1.5rem 1rem 1.5rem;
+    flex-grow: 1;
+}
+.projet-liens {
+    padding: 1rem 1.5rem;
+    background: var(--couleur-fond);
+    border-top: 1px solid var(--couleur-bordure);
+}
+.btn-projet {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    background: var(--couleur-primaire);
+    color: #fff;
+    border-radius: 5px;
+}
+.btn-projet-github {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    color: var(--couleur-secondaire);
+}
+.btn-projet-github:hover {
+    color: var(--couleur-texte);
+}
+
+/* 5. Formation (Timeline) */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--couleur-primaire);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+.timeline-item::after { /* Cercle sur la timeline */
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: var(--couleur-fond-alt);
+    border: 4px solid var(--couleur-primaire);
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+.timeline-content {
+    padding: 20px 30px;
+    background-color: var(--couleur-fond-alt);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 8px;
+    position: relative;
+    box-shadow: var(--ombre-boite);
+}
+.timeline-date {
+    font-weight: bold;
+    color: var(--couleur-primaire);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+.timeline-item:nth-child(odd) .timeline-date {
+    text-align: right;
+    padding-right: 20px;
+}
+.timeline-item:nth-child(even) .timeline-date {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* 8. Contact */
+.contact-flex {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+.contact-form {
+    flex: 2;
+    display: grid;
+    gap: 1rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 5px;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    font-family: var(--font-principale);
+}
+.contact-form button {
+    width: auto;
+    cursor: pointer;
+}
+.contact-reseaux {
+    flex: 1;
+}
+.social-links a {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+    color: var(--couleur-secondaire);
+}
+.social-links a:hover {
+    color: var(--couleur-primaire);
+}
+
+/* 9. Footer */
+.footer {
+    background-color: var(--couleur-fond-alt);
+    border-top: 1px solid var(--couleur-bordure);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 40px;
+    color: var(--couleur-secondaire);
+}
+.footer-links {
+    margin-bottom: 1rem;
+}
+.footer-links a {
+    margin: 0 1rem;
+    color: var(--couleur-secondaire);
+    font-weight: 500;
+}
+.footer-social {
+    margin-bottom: 1rem;
+}
+.footer-social a {
+    font-size: 1.5rem;
+    margin: 0 0.75rem;
+    color: var(--couleur-secondaire);
+}
+.footer-social a:hover {
+    color: var(--couleur-primaire);
+}
+.footer p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* --- Responsive (pour tablettes et mobiles) --- */
+@media (max-width: 992px) {
+    .timeline::after {
+        left: 31px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0%;
+    }
+    .timeline-item::after {
+        left: 21px;
+    }
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+        text-align: left;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 { font-size: 2rem; }
+    .nav-menu {
+        /* (Pour un vrai projet, on ferait un menu burger en JS) */
+        /* Pour cet exemple, on simplifie : */
+        display: none; 
+    }
+    .a-propos-content {
+        flex-direction: column;
+    }
+    .bio-photo {
+        margin-top: 2rem;
+        max-width: 100%;
+    }
+    .soft-skills-list {
+        columns: 1;
+    }
+    .contact-flex {
+        flex-direction: column;
+    }
+}

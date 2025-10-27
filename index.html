@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - [Ton Nom]</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#accueil" class="nav-logo">[Ton Nom]</a>
+            <nav class="nav-menu">
+                <a href="#accueil">Accueil</a>
+                <a href="#a-propos">À propos</a>
+                <a href="#competences">Compétences</a>
+                <a href="#projets">Projets</a>
+                <a href="#formation">Formation</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button id="dark-mode-toggle" class="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="accueil" class="section-accueil">
+            <div class="container">
+                <img src="images/ma-photo-profil.jpg" alt="Photo de [Ton Nom]" class="profile-pic">
+                <h1>[Ton Nom Complet]</h1>
+                <p class="titre-metier">Étudiant en Informatique</p>
+                <div class="cta-buttons">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                    <a href="cv/cv.pdf" class="btn btn-secondary" download>Télécharger mon CV</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="a-propos" class="section-standard">
+            <div class="container">
+                <h2><i class="fa-solid fa-user"></i> À propos de moi</h2>
+                <div class="a-propos-content">
+                    <div class="bio-text">
+                        <p>Je suis étudiant en informatique passionné par le développement web. J’adore apprendre de nouvelles technologies et créer des projets concrets. Je suis curieux, rigoureux et toujours prêt à relever de nouveaux défis pour monter en compétences.</p>
+                        <h3>Études & Objectifs</h3>
+                        <p>Actuellement en [Ton Diplôme/Formation] à [Ton École]. Mon objectif est de devenir [Ton Objectif, ex: Développeur Full-Stack].</p>
+                        <h3>Centres d'intérêt</h3>
+                        <p>En dehors du code, je fais de la musique (piano) et beaucoup de sport (course à pied, basketball).</p>
+                        <a href="cv/cv.pdf" class="btn btn-primary" download>Télécharger mon CV (PDF)</a>
+                    </div>
+                    <img src="images/ma-photo-decontractee.jpg" alt="Photo plus décontractée" class="bio-photo">
+                </div>
+            </div>
+        </section>
+
+        <section id="competences" class="section-standard section-alt">
+            <div class="container">
+                <h2><i class="fa-solid fa-brain"></i> Compétences</h2>
+                
+                <h3><i class="fa-solid fa-laptop-code"></i> Techniques</h3>
+                <div class="skills-grid">
+                    <div class="skill-item"><i class="fa-brands fa-html5"></i> HTML5</div>
+                    <div class="skill-item"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+                    <div class="skill-item"><i class="fa-brands fa-js"></i> JavaScript</div>
+                    <div class="skill-item"><i class="fa-brands fa-python"></i> Python</div>
+                    <div class="skill-item"><i class="fa-brands fa-react"></i> React</div>
+                    <div class="skill-item"><i class="fa-brands fa-git-alt"></i> Git</div>
+                    <div class="skill-item"><i class="fa-brands fa-github"></i> GitHub</div>
+                    <div class="skill-item"><i class="fa-solid fa-database"></i> SQL</div>
+                </div>
+
+                <h3><i class="fa-solid fa-lightbulb"></i> Soft Skills</h3>
+                <ul class="soft-skills-list">
+                    <li>Travail d’équipe</li>
+                    <li>Créativité</li>
+                    <li>Gestion du temps</li>
+                    <li>Communication</li>
+                    <li>Résolution de problèmes</li>
+                </ul>
+
+                <h3><i class="fa-solid fa-globe"></i> Langues</h3>
+                <ul class="soft-skills-list">
+                    <li>Français (Natif)</li>
+                    <li>Anglais (Courant / B2)</li>
+                    <li>Arabe (Notions / A2)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projets" class="section-standard">
+            <div class="container">
+                <h2><i class="fa-solid fa-briefcase"></i> Projets</h2>
+                <div class="projets-grille">
+
+                    <div class="projet-carte">
+                        <img src="images/projet-meteo.jpg" alt="Capture d'écran de l'application météo">
+                        <h3>Application météo</h3>
+                        <p>Une application simple qui utilise l'API OpenWeather pour afficher la météo d'une ville. Technologies : HTML, CSS, JavaScript (Fetch API).</p>
+                        <div class="projet-liens">
+                            <a href="#" target="_blank" class="btn-projet">Voir le site</a>
+                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                    <div class="projet-carte">
+                        <img src="images/projet-jeu.jpg" alt="Capture d'écran du jeu devine le nombre">
+                        <h3>Mini-jeu "Devine le nombre"</h3>
+                        <p>Un jeu classique en JavaScript où l'utilisateur doit deviner un nombre aléatoire. Technologies : HTML, CSS, JavaScript (Logique de jeu).</p>
+                        <div class="projet-liens">
+                            <a href="#" target="_blank" class="btn-projet">Jouer</a>
+                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                    <div class="projet-carte">
+                        <img src="images/projet-portfolio.jpg" alt="Capture d'écran de ce portfolio">
+                        <h3>Mon Portfolio (ce site)</h3>
+                        <p>Mon portfolio personnel responsive pour présenter mon parcours et mes projets. Technologies : HTML, CSS, JavaScript (Dark Mode).</p>
+                        <div class="projet-liens">
+                            <a href="#accueil" class="btn-projet">Vous y êtes !</a>
+                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="formation" class="section-standard section-alt">
+            <div class="container">
+                <h2><i class="fa-solid fa-graduation-cap"></i> Formation & Parcours</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 – 2025 (prévu)</div>
+                        <div class="timeline-content">
+                            <h4>DUT Informatique</h4>
+                            <p>IUT de Lille, Villeneuve d'Ascq</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h4>Baccalauréat Scientifique</h4>
+                            <p>Lycée [Nom de ton Lycée], [Ville]</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">
+                            <h4>Certification "Scientific Computing with Python"</h4>
+                            <p>freeCodeCamp (en ligne)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="passions" class="section-standard">
+            <div class="container">
+                <h2><i class="fa-solid fa-heart"></i> Passions</h2>
+                <p>En dehors de l'informatique, je suis passionné par la <strong>musique électronique</strong> (je produis sur Ableton) et les <strong>jeux de stratégie</strong> comme les échecs ou Age of Empires. J'aime aussi les <strong>voyages</strong> et la randonnée en montagne.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section-standard section-alt">
+            <div class="container">
+                <h2><i class="fa-solid fa-envelope"></i> Contactez-moi</h2>
+                <p>Un projet ? Une question ? N'hésitez pas à me contacter.</p>
+                
+                <div class="contact-flex">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+
+                    <div class="contact-reseaux">
+                        <h3>Mes réseaux</h3>
+                        <p>Retrouvez-moi aussi ici :</p>
+                        <div class="social-links">
+                            <a href="https://github.com/[ton-github]" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://linkedin.com/in/[ton-linkedin]" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://twitter.com/[ton-twitter]" target="_blank" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/[ton-github]" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/[ton-linkedin]" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <p>Copyright © 2025 [Ton Nom]. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
