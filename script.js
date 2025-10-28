@@ -19,11 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Vérifier le thème enregistré dans le localStorage
     let currentTheme = localStorage.getItem('theme');
     if (!currentTheme) {
-        // Si pas de thème, vérifier la préférence système
         currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
     
-    // Appliquer le thème au chargement
     applyTheme(currentTheme);
 
     // Gérer le clic sur le bouton
@@ -34,22 +32,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- (Optionnel) Gestion du formulaire de contact ---
+    // --- Gestion du formulaire de contact ---
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
-            // Empêche l'envoi réel du formulaire (qui rechargerait la page)
             e.preventDefault(); 
-            
-            // Pour un vrai site, tu enverrais ces données à un service
-            // comme Netlify Forms, Formspree, ou à ton propre backend.
-            
-            // On affiche juste un message de succès
             alert("Merci pour votre message ! (Ceci est une démo)");
-            
-            // On vide le formulaire
             contactForm.reset();
         });
+    }
+
+    // --- Gestion du Compteur de Visites ---
+    const visitorCountElement = document.getElementById('visitor-count');
+    if (visitorCountElement) {
+        let count = localStorage.getItem('portfolioVisitorCount');
+        if (count === null) {
+            count = 1;
+        } else {
+            count = parseInt(count) + 1;
+        }
+        localStorage.setItem('portfolioVisitorCount', count);
+        visitorCountElement.textContent = count;
     }
 
 });
