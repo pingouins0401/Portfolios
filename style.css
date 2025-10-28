@@ -60,27 +60,15 @@ img { max-width: 100%; height: auto; }
 .nav-logo { font-size: 1.5rem; font-weight: bold; color: var(--couleur-texte); }
 .nav-menu a { margin: 0 1rem; font-weight: 500; color: var(--couleur-texte); }
 
-/* (NOUVEAU) Extras de la Nav (Langue + Thème) */
-.nav-extras {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-.lang-switcher {
-    font-weight: bold;
-}
+.nav-extras { display: flex; align-items: center; gap: 1.5rem; }
+.lang-switcher { font-weight: bold; }
 .lang-switcher .lang-active {
     color: var(--couleur-texte);
     border-bottom: 2px solid var(--couleur-primaire);
     padding-bottom: 2px;
 }
-.lang-switcher .lang-inactive {
-    color: var(--couleur-secondaire);
-    transition: color 0.3s;
-}
-.lang-switcher .lang-inactive:hover {
-    color: var(--couleur-primaire);
-}
+.lang-switcher .lang-inactive { color: var(--couleur-secondaire); transition: color 0.3s; }
+.lang-switcher .lang-inactive:hover { color: var(--couleur-primaire); }
 .theme-toggle {
     background: none;
     border: none;
@@ -140,11 +128,28 @@ img { max-width: 100%; height: auto; }
 .bio-photo { flex: 1; max-width: 300px; border-radius: 10px; box-shadow: var(--ombre-boite); }
 
 /* 3. Compétences */
+/* (NOUVEAU) Style pour les sous-titres de compétences */
+#competences h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--couleur-bordure);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+#competences h4 i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: var(--couleur-secondaire);
+}
+
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Taille min augmentée */
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; /* Marge réduite */
 }
 .skill-item {
     background: var(--couleur-fond);
@@ -157,7 +162,13 @@ img { max-width: 100%; height: auto; }
 }
 .skill-item:hover { transform: translateY(-5px); box-shadow: var(--ombre-boite); }
 .skill-item i { font-size: 2rem; display: block; margin-bottom: 0.5rem; color: var(--couleur-primaire); }
-.soft-skills-list { list-style: none; padding-left: 0; columns: 2; }
+
+.soft-skills-list { 
+    list-style: none; 
+    padding-left: 0; 
+    columns: 2;
+    margin-top: 1.5rem;
+}
 .soft-skills-list li { padding: 0.5rem 0; position: relative; padding-left: 25px; }
 .soft-skills-list li::before {
     content: '✓';
@@ -246,12 +257,8 @@ img { max-width: 100%; height: auto; }
 .hobby-item i { font-size: 2.5rem; display: block; margin-bottom: 0.75rem; color: var(--couleur-primaire); transition: color 0.3s; }
 .hobby-item:hover i { color: var(--couleur-texte); }
 
-/* 7. Ressources (NOUVEAU) */
-.ressources-list {
-    list-style: none;
-    padding-left: 0;
-    columns: 2;
-}
+/* 7. Ressources */
+.ressources-list { list-style: none; padding-left: 0; columns: 2; }
 .ressources-list li {
     background: var(--couleur-fond);
     padding: 1rem;
@@ -260,16 +267,10 @@ img { max-width: 100%; height: auto; }
     margin-bottom: 1rem;
     transition: all 0.3s;
 }
-.ressources-list li:hover {
-    transform: translateX(5px);
-    box-shadow: var(--ombre-boite);
-}
-.ressources-list li a {
-    font-weight: bold;
-    font-size: 1.1rem;
-}
+.ressources-list li:hover { transform: translateX(5px); box-shadow: var(--ombre-boite); }
+.ressources-list li a { font-weight: bold; font-size: 1.1rem; }
 
-/* 8. Section Fun (MIS À JOUR) */
+/* 8. Section Fun */
 .fun-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -287,7 +288,6 @@ img { max-width: 100%; height: auto; }
 }
 .fun-item p { font-size: 1.2rem; margin-bottom: 0.5rem; }
 #visitor-count { font-size: 3rem; font-weight: bold; color: var(--couleur-primaire); }
-
 .game-link {
     display: flex;
     flex-direction: column;
@@ -300,14 +300,8 @@ img { max-width: 100%; height: auto; }
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     color: var(--couleur-primaire);
 }
-.game-link i {
-    font-size: 3rem;
-    color: var(--couleur-primaire);
-    margin-bottom: 1rem;
-}
-.game-link h3 {
-    font-size: 1.5rem;
-}
+.game-link i { font-size: 3rem; color: var(--couleur-primaire); margin-bottom: 1rem; }
+.game-link h3 { font-size: 1.5rem; }
 
 /* 9. Contact */
 .contact-flex { display: flex; gap: 3rem; align-items: flex-start; }
@@ -354,12 +348,13 @@ img { max-width: 100%; height: auto; }
     .timeline-item:nth-child(odd) .timeline-date,
     .timeline-item:nth-child(even) .timeline-date { text-align: left; padding-left: 0; }
     .ressources-list { columns: 1; }
+    .soft-skills-list { columns: 1; } /* (Modifié) */
 }
 @media (max-width: 768px) {
     h2 { font-size: 2rem; }
     .nav-menu { display: none; }
     .a-propos-content { flex-direction: column; }
     .bio-photo { margin-top: 2rem; max-width: 100%; }
-    .soft-skills-list { columns: 1; }
     .contact-flex { flex-direction: column; }
+    .skills-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); } /* (Modifié) */
 }
