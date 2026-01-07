@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Bryan Leclerc, Computer Science Student. Explore projects, skills, and experience in web development, electronics, and IT support.">
+    <meta name="author" content="Bryan Leclerc">
+    <meta name="keywords"
+        content="Bryan Leclerc, Portfolio, Computer Science, Web Development, Full Stack, Student, IT Support, Electronic">
     <title>Portfolio - Bryan Leclerc</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
+    <!-- Navigation Bar -->
     <header class="navbar">
         <div class="container">
             <a href="#accueil" class="nav-logo">Bryan Leclerc</a>
@@ -25,7 +33,7 @@
                     <a href="index.html" class="lang-inactive">FR</a>
                     <span class="lang-active">EN</span>
                 </div>
-                <button id="dark-mode-toggle" class="theme-toggle">
+                <button id="dark-mode-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
                     <i class="fa-solid fa-moon"></i>
                 </button>
             </div>
@@ -34,8 +42,9 @@
 
     <main>
 
+        <!-- Home Section -->
         <section id="accueil" class="section-accueil">
-             <div class="container">
+            <div class="container">
                 <img src="images/photo-profil.jpg" alt="Photo of Bryan Leclerc" class="profile-pic">
                 <h1>Bryan Leclerc</h1>
                 <p class="titre-metier">Computer Science Student</p>
@@ -47,14 +56,18 @@
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="a-propos" class="section-standard">
             <div class="container">
                 <h2><i class="fa-solid fa-user"></i> About Me</h2>
                 <div class="a-propos-content">
                     <div class="bio-text">
-                        <p>Calm and orderly. Interested in new technologies, I am passionate about computers and electronics. With the volunteering I have done, I have been able to acquire new skills such as customer management. [cite: 93, 94]</p>
+                        <p>Calm and orderly. Interested in new technologies, I am passionate about computers and
+                            electronics. With the volunteering I have done, I have been able to acquire new skills such
+                            as customer management.</p>
                         <h3>Goals</h3>
-                        <p>I am looking for a 4-month internship (Contract search) where I would like to continue to develop new skills with new skills in your company. [cite: 87, 95]</p>
+                        <p>I am looking for a 4-month internship (Contract search) where I would like to continue to
+                            develop new skills with new skills in your company.</p>
                         <a href="cv/Cv.pdf" class="btn btn-primary" download>Download CV (PDF)</a>
                     </div>
                     <img src="images/photo-decontractee.jpg" alt="Casual photo" class="bio-photo">
@@ -62,6 +75,7 @@
             </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="competences" class="section-standard section-alt">
             <div class="container">
                 <h2><i class="fa-solid fa-brain"></i> Skills</h2>
@@ -105,7 +119,7 @@
                     <div class="skill-item"><i class="fa-solid fa-microchip"></i> Arduino</div>
                     <div class="skill-item"><i class="fa-solid fa-code"></i> Lua</div>
                 </div>
-                
+
                 <h4><i class="fa-solid fa-mobile-alt"></i> Mobile, AI & Cloud</h4>
                 <div class="skills-grid">
                     <div class="skill-item"><i class="fa-brands fa-android"></i> Android (Kotlin)</div>
@@ -145,12 +159,14 @@
 
                 <h4><i class="fa-solid fa-globe"></i> Languages</h4>
                 <ul class="soft-skills-list">
-                    <li>French (Native) [cite: 128]</li>
-                    <li>English (B1/B2) [cite: 123]</li>
-                    <li>German (A1) [cite: 125]</li>
+                    <li>French (Native)</li>
+                    <li>English (B1/B2)</li>
+                    <li>German (A1)</li>
                 </ul>
             </div>
         </section>
+
+        <!-- Projects Section -->
         <section id="projets" class="section-standard">
             <div class="container">
                 <h2><i class="fa-solid fa-briefcase"></i> Projects</h2>
@@ -160,94 +176,119 @@
                         <h3>Code Game Jam (2025)</h3>
                         <p>Creation of a video game in 30 hours. Technologies: Godot.</p>
                         <div class="projet-liens">
-                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i>
+                                Code</a>
                         </div>
                     </div>
                     <div class="projet-carte">
                         <img src="images/projet-siteperso.jpg" alt="Personal Website Screenshot">
-                        <h3>Personal Project (2024) [cite: 105]</h3>
-                        <p>Development of a website: multi-language and domain. [cite: 106]</p>
+                        <h3>Personal Project (2024)</h3>
+                        <p>Development of a website: multi-language and domain.</p>
                         <div class="projet-liens">
                             <a href="#" target="_blank" class="btn-projet">View Site</a>
-                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i>
+                                Code</a>
                         </div>
                     </div>
                     <div class="projet-carte">
                         <img src="images/projet-but.jpg" alt="BUT Project Screenshot">
-                        <h3>BUT Project (2022-2023) [cite: 107]</h3>
-                        <p>Collection of needs from professionals and creation of a database from interviews. [cite: 108, 109]</p>
+                        <h3>BUT Project (2022-2023)</h3>
+                        <p>Collection of needs from professionals and creation of a database from interviews.</p>
                         <div class="projet-liens">
-                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i>
+                                Code</a>
                         </div>
                     </div>
                     <div class="projet-carte">
                         <img src="images/projet-sti2d.jpg" alt="Kibble dispenser Screenshot">
-                        <h3>STI2D Project (2021-2022) [cite: 110]</h3>
-                        <p>Creation of an electronic circuit kibble dispenser, programming in C (Arduino). [cite: 111]</p>
+                        <h3>STI2D Project (2021-2022)</h3>
+                        <p>Creation of an electronic circuit kibble dispenser, programming in C (Arduino).</p>
                         <div class="projet-liens">
-                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i>
+                                Code</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="formation" class="section-standard section-alt">
             <div class="container">
                 <h2><i class="fa-solid fa-graduation-cap"></i> Professional Experience & Training</h2>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-date">April 2025 - Aug 2025</div>
-                        <div class="timeline-content"><h4>IT Support Intern - SIA Partners [cite: 65]</h4><p>IT Support, ATERA ticket management, RMM, Power Automate, account migration. [cite: 66]</p></div>
+                        <div class="timeline-content">
+                            <h4>IT Support Intern - SIA Partners</h4>
+                            <p>IT Support, ATERA ticket management, RMM, Power Automate, account migration.</p>
+                        </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">2022 – 2025 (Ongoing)</div>
-                        <div class="timeline-content"><h4>Computer Science BUT (Bachelor) [cite: 113]</h4><p>IUT d'Orsay, Paris-Saclay University. [cite: 115]</p></div>
+                        <div class="timeline-content">
+                            <h4>Computer Science BUT (Bachelor)</h4>
+                            <p>IUT d'Orsay, Paris-Saclay University.</p>
+                        </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-date">2022</div>
-                        <div class="timeline-content"><h4>Bac STI2D SIN - With Honors [cite: 117, 119]</h4><p>Lycée Modeste Leroy, Evreux. (Euro Class [cite: 124], Erasmus Trip to Turkey [cite: 121]).</p></div>
+                        <div class="timeline-content">
+                            <h4>Bac STI2D SIN - With Honors</h4>
+                            <p>Lycée Modeste Leroy, Evreux. (Euro Class, Erasmus Trip to Turkey).</p>
+                        </div>
                     </div>
-                     <div class="timeline-item">
+                    <div class="timeline-item">
                         <div class="timeline-date">Dec 2019 - Feb 2020</div>
-                        <div class="timeline-content"><h4>Volunteer - Anet Ice Rink [cite: 103]</h4><p>Customer management, equipment distribution, cleaning, cash register and stock management. [cite: 103]</p></div>
+                        <div class="timeline-content">
+                            <h4>Volunteer - Anet Ice Rink</h4>
+                            <p>Customer management, equipment distribution, cleaning, cash register and stock
+                                management.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Hobbies Section -->
         <section id="hobbies" class="section-standard">
-             <div class="container">
+            <div class="container">
                 <h2><i class="fa-solid fa-heart"></i> Passions & Hobbies</h2>
                 <p>When I'm not in front of a screen, here's what I'm busy with:</p>
                 <div class="hobbies-grid">
-                    <div class="hobby-item"><i class="fa-solid fa-microchip"></i> Electronics [cite: 72]</div>
-                    <div class="hobby-item"><i class="fa-solid fa-server"></i> Servers [cite: 75]</div>
-                    <div class="hobby-item"><i class="fa-solid fa-screwdriver-wrench"></i> Soldering [cite: 77]</div>
-                    <div class="hobby-item"><i class="fa-solid fa-seedling"></i> Hydroponics [cite: 80]</div>
-                    <div class="hobby-item"><i class="fa-solid fa-gamepad"></i> Video Games [cite: 81]</div>
-                    <div class="hobby-item"><i class="fa-solid fa-sliders"></i> Mixing [cite: 82]</div>
-                    <div class="hobby-item"><i class="fa-solid fa-palette"></i> DTP/Design [cite: 83]</div>
-                    <div class="hobby-item"><i class="fa-solid fa-helicopter"></i> Drones [cite: 84]</div>
-                    <div class="hobby-item"><i class="fa-solid fa-cube"></i> 3D [cite: 85]</div>
-                    <div class="hobby-item"><i class="fa-solid fa-car-burst"></i> Mechanics [cite: 86]</div>
+                    <div class="hobby-item"><i class="fa-solid fa-microchip"></i> Electronics</div>
+                    <div class="hobby-item"><i class="fa-solid fa-server"></i> Servers</div>
+                    <div class="hobby-item"><i class="fa-solid fa-screwdriver-wrench"></i> Soldering</div>
+                    <div class="hobby-item"><i class="fa-solid fa-seedling"></i> Hydroponics</div>
+                    <div class="hobby-item"><i class="fa-solid fa-gamepad"></i> Video Games</div>
+                    <div class="hobby-item"><i class="fa-solid fa-sliders"></i> Mixing</div>
+                    <div class="hobby-item"><i class="fa-solid fa-palette"></i> DTP/Design</div>
+                    <div class="hobby-item"><i class="fa-solid fa-helicopter"></i> Drones</div>
+                    <div class="hobby-item"><i class="fa-solid fa-cube"></i> 3D</div>
+                    <div class="hobby-item"><i class="fa-solid fa-car-burst"></i> Mechanics</div>
                 </div>
             </div>
         </section>
 
+        <!-- Resources Section -->
         <section id="ressources" class="section-standard section-alt">
             <div class="container">
                 <h2><i class="fa-solid fa-book-open-reader"></i> Learning & Resources</h2>
                 <p>I'm always learning. Here are some of the platforms I use:</p>
                 <ul class="ressources-list">
-                    <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> - For web and Python certifications.</li>
-                    <li><a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a> - A complete curriculum for Full Stack.</li>
-                    <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> - The reference for HTML/CSS/JS.</li>
-                    <li><a href="https://github.com/public-apis/public-apis" target="_blank">Public APIs</a> - A list of APIs to practice with.</li>
+                    <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> - For web and Python
+                        certifications.</li>
+                    <li><a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a> - A complete
+                        curriculum for Full Stack.</li>
+                    <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> - The reference
+                        for HTML/CSS/JS.</li>
+                    <li><a href="https://github.com/public-apis/public-apis" target="_blank">Public APIs</a> - A list of
+                        APIs to practice with.</li>
                 </ul>
             </div>
         </section>
 
+        <!-- Fun Section -->
         <section id="section-fun" class="section-standard">
             <div class="container">
                 <h2><i class="fa-solid fa-wand-magic-sparkles"></i> Just for Fun</h2>
@@ -256,7 +297,8 @@
                         <p>You are visitor number:</p>
                         <span id="visitor-count">...</span>
                     </div>
-                    <a href="https://www.goodboydigital.com/pixijs/storm-of-bullets/" target="_blank" class="fun-item game-link">
+                    <a href="https://www.goodboydigital.com/pixijs/storm-of-bullets/" target="_blank"
+                        class="fun-item game-link">
                         <i class="fa-solid fa-gamepad"></i>
                         <h3>Game Break</h3>
                         <p>Test a mini web game (PixiJS demo)</p>
@@ -265,29 +307,34 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="section-standard section-alt">
             <div class="container">
                 <h2><i class="fa-solid fa-envelope"></i> Contact Me</h2>
                 <p>Looking for an internship or just want to chat, feel free to contact me.</p>
                 <div class="contact-flex">
                     <form id="contact-form" class="contact-form">
-                        <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
-                        <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
-                        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+                        <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name"
+                                required></div>
+                        <div class="form-group"><label for="email">Email</label><input type="email" id="email"
+                                name="email" required></div>
+                        <div class="form-group"><label for="message">Message</label><textarea id="message"
+                                name="message" rows="5" required></textarea></div>
                         <button type="submit" class="btn btn-primary">Send</button>
                     </form>
                     <div class="contact-reseaux">
                         <h3>My Networks</h3>
                         <p>Find me here too:</p>
                         <div class="social-links">
-                            <a href="https://github.com/[ton-github]" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://linkedin.com/in/[ton-linkedin]" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <!-- TODO: Add actual GitHub and LinkedIn URLs -->
+                            <a href="#" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
                         <br>
                         <h3>Info</h3>
-                        <p><i class="fa-solid fa-phone"></i> 07 50 44 99 67 [cite: 89]</p>
-                        <p><i class="fa-solid fa-envelope-open-text"></i> bryan.leclerc04@gmail.com [cite: 90]</p>
-                        <p><i class="fa-solid fa-location-dot"></i> Orsay, France [cite: 91]</p>
+                        <p><i class="fa-solid fa-phone"></i> 07 50 44 99 67</p>
+                        <p><i class="fa-solid fa-envelope-open-text"></i> bryan.leclerc04@gmail.com</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Orsay, France</p>
                     </div>
                 </div>
             </div>
@@ -295,20 +342,22 @@
     </main>
 
     <footer class="footer">
-         <div class="container">
+        <div class="container">
             <div class="footer-links">
                 <a href="#accueil">Home</a>
                 <a href="#projets">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="footer-social">
-                <a href="https://github.com/[ton-github]" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com/in/[ton-linkedin]" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <!-- TODO: Add actual GitHub and LinkedIn URLs -->
+                <a href="#" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             </div>
             <p>Copyright © 2025 Bryan Leclerc. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
+
 </html>

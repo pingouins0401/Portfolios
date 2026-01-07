@@ -1,56 +1,81 @@
+/**
+ * Portfolio Script
+ * Handles theme toggling, form submission demo, and visitor counting.
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Gestion du Thème (Dark Mode) ---
+    /* =========================================
+       Theme Management (Dark/Light Mode)
+       ========================================= */
     const themeToggleButton = document.getElementById('dark-mode-toggle');
     const moonIcon = 'fa-moon';
     const sunIcon = 'fa-sun';
 
-    // Fonction pour appliquer le thème
+    /**
+     * Applies the specified theme to the document body and updates the icon.
+     * @param {string} theme - 'dark' or 'light'
+     */
     const applyTheme = (theme) => {
         if (theme === 'dark') {
             document.body.classList.add('dark-mode');
+            // Switch to sun icon when in dark mode
             themeToggleButton.querySelector('i').classList.replace(moonIcon, sunIcon);
         } else {
             document.body.classList.remove('dark-mode');
+            // Switch to moon icon when in light mode
             themeToggleButton.querySelector('i').classList.replace(sunIcon, moonIcon);
         }
     };
 
-    // Vérifier le thème enregistré dans le localStorage
+    // 1. Check for saved theme preference in localStorage
     let currentTheme = localStorage.getItem('theme');
+    
+    // 2. If no saved preference, check system preference
     if (!currentTheme) {
         currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
     
+    // 3. Apply the determined theme
     applyTheme(currentTheme);
 
-    // Gérer le clic sur le bouton
-    themeToggleButton.addEventListener('click', () => {
-        let newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
-        applyTheme(newTheme);
-        localStorage.setItem('theme', newTheme);
-    });
+    // 4. Handle toggle button click
+    if (themeToggleButton) {
+        themeToggleButton.addEventListener('click', () => {
+            const newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+            applyTheme(newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    }
 
 
-    // --- Gestion du formulaire de contact ---
+    /* =========================================
+       Contact Form Handling
+       ========================================= */
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault(); 
+            // Demo alert - in a real app, this would send data to a backend or email service.
             alert("Merci pour votre message ! (Ceci est une démo)");
             contactForm.reset();
         });
     }
 
-    // --- Gestion du Compteur de Visites ---
+    /* =========================================
+       Visitor Counter (Local Demo)
+       ========================================= */
     const visitorCountElement = document.getElementById('visitor-count');
     if (visitorCountElement) {
         let count = localStorage.getItem('portfolioVisitorCount');
-        if (count === null) {
+        
+        // Initialize or increment
+        if (count === null || isNaN(count)) {
             count = 1;
         } else {
-            count = parseInt(count) + 1;
+            count = parseInt(count, 10) + 1;
         }
+        
         localStorage.setItem('portfolioVisitorCount', count);
         visitorCountElement.textContent = count;
     }
