@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Sheet - Bryan Leclerc</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .cheat-sheet-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .snippet-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .snippet-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .snippet-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--couleur-primaire);
+        }
+
+        .copy-btn {
+            background: var(--couleur-secondaire);
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .copy-btn:hover {
+            background: var(--couleur-primaire);
+        }
+
+        pre {
+            background: #1e1e1e;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: #d4d4d4;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        code {
+            font-family: inherit;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--couleur-texte);
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="galaxy-canvas"></canvas>
+
+    <div class="cheat-sheet-container">
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Retour au Portfolio</a>
+        <h1><i class="fa-solid fa-code"></i> Code Cheat Sheet</h1>
+        <p>Une collection de snippets utiles pour le développement.</p>
+
+        <!-- HTML Snippet -->
+        <div class="snippet-card">
+            <div class="snippet-header">
+                <span class="snippet-title">HTML5 Boilerplate</span>
+                <button class="copy-btn" onclick="copyToClipboard('code-html')"><i class="fa-regular fa-copy"></i>
+                    Copier</button>
+            </div>
+            <pre><code id="code-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <!-- CSS Snippet -->
+        <div class="snippet-card">
+            <div class="snippet-header">
+                <span class="snippet-title">CSS Flexbox Center</span>
+                <button class="copy-btn" onclick="copyToClipboard('code-css')"><i class="fa-regular fa-copy"></i>
+                    Copier</button>
+            </div>
+            <pre><code id="code-css">.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}</code></pre>
+        </div>
+
+        <!-- JS Snippet -->
+        <div class="snippet-card">
+            <div class="snippet-header">
+                <span class="snippet-title">JS Fetch API</span>
+                <button class="copy-btn" onclick="copyToClipboard('code-js')"><i class="fa-regular fa-copy"></i>
+                    Copier</button>
+            </div>
+            <pre><code id="code-js">fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));</code></pre>
+        </div>
+
+        <!-- Python Snippet -->
+        <div class="snippet-card">
+            <div class="snippet-header">
+                <span class="snippet-title">Python Read File</span>
+                <button class="copy-btn" onclick="copyToClipboard('code-py')"><i class="fa-regular fa-copy"></i>
+                    Copier</button>
+            </div>
+            <pre><code id="code-py">with open('file.txt', 'r') as f:
+    content = f.read()
+    print(content)</code></pre>
+        </div>
+
+    </div>
+
+    <script>
+        // Galaxy Background Logic (Simplified for this page)
+        const canvas = document.getElementById('galaxy-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let stars = [];
+        for (let i = 0; i < 100; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 2,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5
+            });
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'white';
+            stars.forEach(star => {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fill();
+                star.x += star.vx;
+                star.y += star.vy;
+                if (star.x < 0 || star.x > canvas.width) star.vx *= -1;
+                if (star.y < 0 || star.y > canvas.height) star.vy *= -1;
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // Copy Functionality
+        function copyToClipboard(elementId) {
+            const codeText = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(codeText).then(() => {
+                alert('Code copié !');
+            }).catch(err => {
+                console.error('Erreur lors de la copie :', err);
+            });
+        }
+    </script>
+</body>
+
+</html>

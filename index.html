@@ -4,19 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio de Bryan Leclerc, Étudiant en Informatique. Découvrez mes projets, compétences et expériences en développement web, électronique et support IT.">
-    <meta name="author" content="Bryan Leclerc">
-    <meta name="keywords"
-        content="Bryan Leclerc, Portfolio, Informatique, Développement Web, Full Stack, Étudiant, Support IT, Électronique, Orsay">
     <title>Portfolio - Bryan Leclerc</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <canvas id="galaxy-canvas"></canvas>
 
-    <!-- Navigation Bar -->
     <header class="navbar">
         <div class="container">
             <a href="#accueil" class="nav-logo">Bryan Leclerc</a>
@@ -24,6 +22,7 @@
                 <a href="#accueil">Accueil</a>
                 <a href="#a-propos">À propos</a>
                 <a href="#competences">Compétences</a>
+                <a href="#certifications">Certifications</a>
                 <a href="#projets">Projets</a>
                 <a href="#formation">Parcours</a>
                 <a href="#contact">Contact</a>
@@ -33,7 +32,7 @@
                     <span class="lang-active">FR</span>
                     <a href="en.html" class="lang-inactive">EN</a>
                 </div>
-                <button id="dark-mode-toggle" class="theme-toggle" aria-label="Activer le mode sombre">
+                <button id="dark-mode-toggle" class="theme-toggle">
                     <i class="fa-solid fa-moon"></i>
                 </button>
             </div>
@@ -42,294 +41,351 @@
 
     <main>
 
-        <!-- Home Section -->
         <section id="accueil" class="section-accueil">
             <div class="container">
-                <img src="images/photo-profil.jpg" alt="Photo de Bryan Leclerc" class="profile-pic">
-                <h1>Bryan Leclerc</h1>
-                <p class="titre-metier">Étudiant en BUT Informatique</p>
-                <div class="cta-buttons">
-                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
-                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
-                    <a href="cv/Cv.pdf" class="btn btn-secondary" download>Télécharger mon CV</a>
+                <div class="glass-card profile-card">
+                    <img src="images/photo-profil.png" alt="Photo de Bryan Leclerc" class="profile-pic">
+                    <h1>Bryan Leclerc</h1>
+                    <p class="titre-metier">Étudiant en BUT Informatique</p>
+                    <div class="cta-buttons">
+                        <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                        <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                        <a href="cv/Cv.pdf" class="btn btn-secondary" download>Télécharger mon CV</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="a-propos" class="section-standard">
             <div class="container">
-                <h2><i class="fa-solid fa-user"></i> À propos de moi</h2>
-                <div class="a-propos-content">
-                    <div class="bio-text">
-                        <p>Calme et ordonné, je suis intéressé par les nouvelles technologies et passionné par
-                            l'informatique et l'électronique. Grâce à mes expériences de bénévolat, j'ai pu acquérir de
-                            nouvelles compétences, notamment en gestion de la clientèle.</p>
-                        <h3>Objectifs</h3>
-                        <p>Je recherche un stage de 4 mois où je pourrai continuer à développer de nouvelles compétences
-                            et contribuer aux projets de votre entreprise.</p>
-                        <a href="cv/Cv.pdf" class="btn btn-primary" download>Télécharger mon CV (PDF)</a>
+                <div class="glass-card">
+                    <h2><i class="fa-solid fa-user"></i> À propos de moi</h2>
+                    <div class="a-propos-content">
+                        <div class="bio-text">
+                            <p>Calme et ordonné, je suis intéressé par les nouvelles technologies et passionné par
+                                l'informatique et l'électronique. Grâce à mes expériences de bénévolat, j'ai pu acquérir
+                                de nouvelles compétences, notamment en gestion de la clientèle.</p>
+                            <h3>Objectifs</h3>
+                            <p>Je recherche un stage de 4 mois où je pourrai continuer à développer de nouvelles
+                                compétences et contribuer aux projets de votre entreprise.</p>
+                            <a href="cv/Cv.pdf" class="btn btn-primary" download>Télécharger mon CV (PDF)</a>
+                        </div>
+                        <img src="images/photo-decontractee.jpg" alt="Photo plus décontractée" class="bio-photo">
                     </div>
-                    <img src="images/photo-decontractee.jpg" alt="Photo plus décontractée" class="bio-photo">
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="competences" class="section-standard section-alt">
+        <section id="competences" class="section-standard">
             <div class="container">
-                <h2><i class="fa-solid fa-brain"></i> Compétences</h2>
+                <div class="glass-card">
+                    <h2><i class="fa-solid fa-brain"></i> Compétences</h2>
 
-                <h4><i class="fa-solid fa-laptop-code"></i> Développement Web / Full Stack</h4>
-                <div class="skills-grid">
-                    <div class="skill-item"><i class="fa-brands fa-html5"></i> HTML5</div>
-                    <div class="skill-item"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
-                    <div class="skill-item"><i class="fa-brands fa-js"></i> JavaScript</div>
-                    <div class="skill-item"><i class="fa-solid fa-laptop-code"></i> TypeScript</div>
-                    <div class="skill-item"><i class="fa-brands fa-react"></i> React</div>
-                    <div class="skill-item"><i class="fa-brands fa-node-js"></i> Node.js</div>
-                    <div class="skill-item"><i class="fa-brands fa-php"></i> PHP</div>
-                    <div class="skill-item"><i class="fa-brands fa-python"></i> Python</div>
-                    <div class="skill-item"><i class="fa-solid fa-leaf"></i> Django</div>
-                    <div class="skill-item"><i class="fa-solid fa-code-branch"></i> API REST</div>
-                    <div class="skill-item"><i class="fa-brands fa-python"></i> Jupyter</div>
+                    <h4><i class="fa-solid fa-laptop-code"></i> Développement Web / Full Stack</h4>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fa-brands fa-html5"></i> HTML5</div>
+                        <div class="skill-item"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+                        <div class="skill-item"><i class="fa-brands fa-js"></i> JavaScript</div>
+                        <div class="skill-item"><i class="fa-solid fa-laptop-code"></i> TypeScript</div>
+                        <div class="skill-item"><i class="fa-brands fa-react"></i> React</div>
+                        <div class="skill-item"><i class="fa-brands fa-vuejs"></i> Vue.js</div>
+                        <div class="skill-item"><i class="fa-brands fa-angular"></i> Angular</div>
+                        <div class="skill-item"><i class="fa-brands fa-node-js"></i> Node.js</div>
+                        <div class="skill-item"><i class="fa-brands fa-php"></i> PHP</div>
+                        <div class="skill-item"><i class="fa-brands fa-laravel"></i> Laravel</div>
+                        <div class="skill-item"><i class="fa-brands fa-symfony"></i> Symfony</div>
+                        <div class="skill-item"><i class="fa-brands fa-python"></i> Python</div>
+                        <div class="skill-item"><i class="fa-solid fa-leaf"></i> Django</div>
+                        <div class="skill-item"><i class="fa-solid fa-flask"></i> Flask</div>
+                        <div class="skill-item"><i class="fa-solid fa-code-branch"></i> API REST</div>
+                        <div class="skill-item"><i class="fa-brands fa-python"></i> Jupyter</div>
+                    </div>
+
+                    <h4><i class="fa-solid fa-database"></i> Bases de Données & Serveurs</h4>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fa-solid fa-database"></i> SQL (MySQL, PostgreSQL)</div>
+                        <div class="skill-item"><i class="fa-solid fa-database"></i> SQLite</div>
+                        <div class="skill-item"><i class="fa-solid fa-leaf"></i> MongoDB</div>
+                        <div class="skill-item"><i class="fa-solid fa-shield-cat"></i> Turtle</div>
+                        <div class="skill-item"><i class="fa-brands fa-docker"></i> Docker</div>
+                        <div class="skill-item"><i class="fa-solid fa-server"></i> Nginx</div>
+                        <div class="skill-item"><i class="fa-solid fa-server"></i> Apache</div>
+                        <div class="skill-item"><i class="fa-solid fa-boxes-stacked"></i> Kubernetes</div>
+                        <div class="skill-item"><i class="fa-brands fa-aws"></i> AWS (EC2, S3)</div>
+                    </div>
+
+                    <h4><i class="fa-solid fa-cogs"></i> Logiciels, Systèmes & Embarqué</h4>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fa-brands fa-java"></i> Java</div>
+                        <div class="skill-item"><i class="fa-solid fa-laptop-code"></i> C / C++</div>
+                        <div class="skill-item"><i class="fa-solid fa-laptop-code"></i> C# (UI/UX)</div>
+                        <div class="skill-item"><i class="fa-brands fa-rust"></i> Rust</div>
+                        <div class="skill-item"><i class="fa-brands fa-golang"></i> Go</div>
+                        <div class="skill-item"><i class="fa-solid fa-terminal"></i> Bash</div>
+                        <div class="skill-item"><i class="fa-solid fa-terminal"></i> PowerShell</div>
+                        <div class="skill-item"><i class="fa-solid fa-microchip"></i> Arduino</div>
+                        <div class="skill-item"><i class="fa-solid fa-microchip"></i> Raspberry Pi</div>
+                        <div class="skill-item"><i class="fa-solid fa-code"></i> Lua</div>
+                    </div>
+
+                    <h4><i class="fa-solid fa-mobile-alt"></i> Mobile, IA & Cloud</h4>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fa-brands fa-android"></i> Android (Kotlin)</div>
+                        <div class="skill-item"><i class="fa-brands fa-apple"></i> iOS (Swift)</div>
+                        <div class="skill-item"><i class="fa-solid fa-mobile-screen"></i> Flutter</div>
+                        <div class="skill-item"><i class="fa-solid fa-robot"></i> IA (Python, TensorFlow)</div>
+                        <div class="skill-item"><i class="fa-solid fa-chart-simple"></i> R</div>
+                        <div class="skill-item"><i class="fa-solid fa-square-root-variable"></i> MATLAB</div>
+                    </div>
+
+                    <h4><i class="fa-solid fa-shield-halved"></i> Réseaux & Cybersécurité</h4>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fa-brands fa-linux"></i> Linux (Debian, Arch)</div>
+                        <div class="skill-item"><i class="fa-brands fa-windows"></i> Windows Server</div>
+                        <div class="skill-item"><i class="fa-solid fa-network-wired"></i> Wireshark</div>
+                        <div class="skill-item"><i class="fa-brands fa-linux"></i> Kali Linux</div>
+                        <div class="skill-item"><i class="fa-solid fa-user-secret"></i> Metasploit</div>
+                        <div class="skill-item"><i class="fa-solid fa-lock"></i> Cryptographie</div>
+                    </div>
+
+                    <h4><i class="fa-solid fa-lightbulb"></i> Gestion de Projet & Outils</h4>
+                    <ul class="soft-skills-list">
+                        <li>Agile</li>
+                        <li>Scrum</li>
+                        <li>Kanban</li>
+                        <li>Cycle en V</li>
+                        <li>DevOps</li>
+                        <li>Git / GitHub</li>
+                        <li>Microsoft Office Suite</li>
+                        <li>Power Platform (Apps, BI, Automate)</li>
+                        <li>Microsoft Admin (Intune, Entra)</li>
+                        <li>Google Workspace</li>
+                        <li>Atera (Tickets IT)</li>
+                        <li>Splashtop (RMM)</li>
+                        <li>Automatisation (VBA)</li>
+                    </ul>
+
+                    <h4><i class="fa-solid fa-globe"></i> Langues</h4>
+                    <ul class="soft-skills-list">
+                        <li>Français (Maternelle) [cite: 76]</li>
+                        <li>Anglais (B1/B2) [cite: 73]</li>
+                        <li>Allemand (A1) [cite: 74]</li>
+                    </ul>
                 </div>
-
-                <h4><i class="fa-solid fa-database"></i> Bases de Données & Serveurs</h4>
-                <div class="skills-grid">
-                    <div class="skill-item"><i class="fa-solid fa-database"></i> SQL (MySQL)</div>
-                    <div class="skill-item"><i class="fa-solid fa-database"></i> SQLite</div>
-                    <div class="skill-item"><i class="fa-solid fa-leaf"></i> MongoDB</div>
-                    <div class="skill-item"><i class="fa-solid fa-shield-cat"></i> Turtle</div>
-                    <div class="skill-item"><i class="fa-brands fa-docker"></i> Docker</div>
-                    <div class="skill-item"><i class="fa-solid fa-server"></i> Nginx</div>
-                    <div class="skill-item"><i class="fa-solid fa-server"></i> Apache</div>
-                    <div class="skill-item"><i class="fa-solid fa-boxes-stacked"></i> Kubernetes</div>
-                </div>
-
-                <h4><i class="fa-solid fa-cogs"></i> Logiciels, Systèmes & Embarqué</h4>
-                <div class="skills-grid">
-                    <div class="skill-item"><i class="fa-brands fa-java"></i> Java</div>
-                    <div class="skill-item"><i class="fa-solid fa-laptop-code"></i> C / C++</div>
-                    <div class="skill-item"><i class="fa-solid fa-laptop-code"></i> C# (UI/UX)</div>
-                    <div class="skill-item"><i class="fa-brands fa-rust"></i> Rust</div>
-                    <div class="skill-item"><i class="fa-brands fa-golang"></i> Go</div>
-                    <div class="skill-item"><i class="fa-solid fa-terminal"></i> Bash</div>
-                    <div class="skill-item"><i class="fa-solid fa-terminal"></i> PowerShell</div>
-                    <div class="skill-item"><i class="fa-solid fa-microchip"></i> Arduino</div>
-                    <div class="skill-item"><i class="fa-solid fa-code"></i> Lua</div>
-                </div>
-
-                <h4><i class="fa-solid fa-mobile-alt"></i> Mobile, IA & Cloud</h4>
-                <div class="skills-grid">
-                    <div class="skill-item"><i class="fa-brands fa-android"></i> Android (Kotlin)</div>
-                    <div class="skill-item"><i class="fa-brands fa-apple"></i> iOS (Swift)</div>
-                    <div class="skill-item"><i class="fa-solid fa-mobile-screen"></i> Flutter</div>
-                    <div class="skill-item"><i class="fa-solid fa-robot"></i> IA (Python)</div>
-                    <div class="skill-item"><i class="fa-solid fa-chart-simple"></i> R</div>
-                    <div class="skill-item"><i class="fa-solid fa-square-root-variable"></i> MATLAB</div>
-                    <div class="skill-item"><i class="fa-brands fa-aws"></i> AWS</div>
-                </div>
-
-                <h4><i class="fa-solid fa-shield-halved"></i> Réseaux & Cybersécurité</h4>
-                <div class="skills-grid">
-                    <div class="skill-item"><i class="fa-brands fa-linux"></i> Linux</div>
-                    <div class="skill-item"><i class="fa-brands fa-windows"></i> Windows Server</div>
-                    <div class="skill-item"><i class="fa-solid fa-network-wired"></i> Wireshark</div>
-                    <div class="skill-item"><i class="fa-brands fa-linux"></i> Kali Linux</div>
-                    <div class="skill-item"><i class="fa-solid fa-user-secret"></i> Metasploit</div>
-                </div>
-
-                <h4><i class="fa-solid fa-lightbulb"></i> Gestion de Projet & Outils</h4>
-                <ul class="soft-skills-list">
-                    <li>Agile</li>
-                    <li>Scrum</li>
-                    <li>Kanban</li>
-                    <li>Cycle en V</li>
-                    <li>DevOps</li>
-                    <li>Git / GitHub</li>
-                    <li>Microsoft Office Suite</li>
-                    <li>Power Platform (Apps, BI, Automate)</li>
-                    <li>Microsoft Admin (Intune, Entra)</li>
-                    <li>Google Workspace</li>
-                    <li>Atera (Tickets IT)</li>
-                    <li>Splashtop (RMM)</li>
-                    <li>Automatisation (VBA)</li>
-                </ul>
-
-                <h4><i class="fa-solid fa-globe"></i> Langues</h4>
-                <ul class="soft-skills-list">
-                    <li>Français (Maternelle)</li>
-                    <li>Anglais (B1/B2)</li>
-                    <li>Allemand (A1)</li>
-                </ul>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <section id="certifications" class="section-standard">
+            <div class="container">
+                <div class="glass-card">
+                    <h2><i class="fa-solid fa-certificate"></i> Certifications en cours</h2>
+                    <div class="certifications-grid">
+                        <div class="certification-item">
+                            <i class="fa-brands fa-free-code-camp"></i>
+                            <h3>FreeCodeCamp</h3>
+                            <p>Scientific Computing with Python</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="certification-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h3>ANSSI</h3>
+                            <p>MOOC SecNumAcadémie</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="certification-item">
+                            <i class="fa-brands fa-aws"></i>
+                            <h3>AWS</h3>
+                            <p>Cloud Practitioner</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 30%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="projets" class="section-standard">
             <div class="container">
-                <h2><i class="fa-solid fa-briefcase"></i> Projets</h2>
-                <div class="projets-grille">
-                    <div class="projet-carte">
-                        <img src="images/projet-gamejam.jpg" alt="Capture d'écran Code Game Jam">
-                        <h3>Code Game Jam (2025)</h3>
-                        <p>Création d'un jeu vidéo complet en 30 heures. Technologies : Godot.</p>
-                        <div class="projet-liens">
-                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i>
-                                Code</a>
+                <div class="glass-card">
+                    <h2><i class="fa-solid fa-briefcase"></i> Projets</h2>
+                    <div class="projets-grille">
+                        <div class="projet-carte">
+                            <img src="images/projet-gamejam.jpg" alt="Capture d'écran Code Game Jam">
+                            <h3>Code Game Jam (2025) [cite: 46]</h3>
+                            <p>Création d'un jeu vidéo complet en 30 heures. Technologies : Godot. [cite: 47]</p>
+                            <div class="projet-liens">
+                                <a href="#" target="_blank" class="btn-projet-github"><i
+                                        class="fa-brands fa-github"></i> Code</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="projet-carte">
-                        <img src="images/projet-siteperso.jpg" alt="Capture d'écran site web personnel">
-                        <h3>Projet Personnel (2024)</h3>
-                        <p>Développement d'un site web personnel gérant plusieurs langues et un nom de domaine.</p>
-                        <div class="projet-liens">
-                            <a href="#" target="_blank" class="btn-projet">Voir le site</a>
-                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i>
-                                Code</a>
+                        <div class="projet-carte">
+                            <img src="images/projet-siteperso.jpg" alt="Capture d'écran site web personnel">
+                            <h3>Projet Personnel (2024) [cite: 48]</h3>
+                            <p>Développement d'un site web personnel gérant plusieurs langues et un nom de domaine.
+                                [cite: 49]</p>
+                            <div class="projet-liens">
+                                <a href="#" target="_blank" class="btn-projet">Voir le site</a>
+                                <a href="#" target="_blank" class="btn-projet-github"><i
+                                        class="fa-brands fa-github"></i> Code</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="projet-carte">
-                        <img src="images/projet-but.jpg" alt="Capture d'écran projet BUT">
-                        <h3>Projet BUT (2022-2023)</h3>
-                        <p>Recueil de besoins et création d'une base de données à partir d'interviews de professionnels.
-                        </p>
-                        <div class="projet-liens">
-                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i>
-                                Code</a>
+                        <div class="projet-carte">
+                            <img src="images/projet-but.jpg" alt="Capture d'écran projet BUT">
+                            <h3>Projet BUT (2022-2023) [cite: 55]</h3>
+                            <p>Recueil de besoins [cite: 51] et création d'une base de données à partir d'interviews de
+                                professionnels. [cite: 59, 60]</p>
+                            <div class="projet-liens">
+                                <a href="#" target="_blank" class="btn-projet-github"><i
+                                        class="fa-brands fa-github"></i> Code</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="projet-carte">
-                        <img src="images/projet-sti2d.jpg" alt="Capture d'écran distributeur croquettes">
-                        <h3>Projet STI2D (2021-2022)</h3>
-                        <p>Distributeur de croquettes : circuit électronique, programmation C (Arduino) et application
-                            mobile.</p>
-                        <div class="projet-liens">
-                            <a href="#" target="_blank" class="btn-projet-github"><i class="fa-brands fa-github"></i>
-                                Code</a>
+                        <div class="projet-carte">
+                            <img src="images/projet-sti2d.jpg" alt="Capture d'écran distributeur croquettes">
+                            <h3>Projet STI2D (2021-2022) [cite: 61]</h3>
+                            <p>Distributeur de croquettes : circuit électronique, programmation C (Arduino) et
+                                application mobile. [cite: 62, 63]</p>
+                            <div class="projet-liens">
+                                <a href="#" target="_blank" class="btn-projet-github"><i
+                                        class="fa-brands fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Training Section -->
-        <section id="formation" class="section-standard section-alt">
+        <section id="formation" class="section-standard">
             <div class="container">
-                <h2><i class="fa-solid fa-graduation-cap"></i> Parcours Professionnel & Formation</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">Avril 2025 - Août 2025</div>
-                        <div class="timeline-content">
-                            <h4>Stage Support IT - SIA Partners</h4>
-                            <p>Support IT, gestion de tickets (ATERA), RMM, Power Automate, migration.</p>
+                <div class="glass-card">
+                    <h2><i class="fa-solid fa-graduation-cap"></i> Parcours Professionnel & Formation</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Avril 2025 - Août 2025</div>
+                            <div class="timeline-content">
+                                <h4>Stage Support IT - SIA Partners [cite: 65]</h4>
+                                <p>Support IT, gestion de tickets (ATERA), RMM, Power Automate, migration. [cite: 66]
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2022 – 2025 (en cours)</div>
-                        <div class="timeline-content">
-                            <h4>BUT Informatique</h4>
-                            <p>IUT d'Orsay, Université Paris-Saclay (3ème année).</p>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2022 – 2025 (en cours)</div>
+                            <div class="timeline-content">
+                                <h4>BUT Informatique [cite: 39]</h4>
+                                <p>IUT d'Orsay, Université Paris-Saclay (3ème année). [cite: 39, 40]</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2022</div>
-                        <div class="timeline-content">
-                            <h4>Bac STI2D SIN - Mention Assez Bien</h4>
-                            <p>Lycée Modeste Leroy, Evreux. (Classe Euro, Erasmus en Turquie).</p>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2022</div>
+                            <div class="timeline-content">
+                                <h4>Bac STI2D SIN - Mention Assez Bien [cite: 41, 42]</h4>
+                                <p>Lycée Modeste Leroy, Evreux. (Classe Euro [cite: 44], Erasmus en Turquie [cite: 43]).
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Hobbies Section -->
         <section id="hobbies" class="section-standard">
             <div class="container">
-                <h2><i class="fa-solid fa-heart"></i> Passions & Hobbies</h2>
-                <p>Quand je ne suis pas devant un écran, voici ce qui m'occupe :</p>
-                <div class="hobbies-grid">
-                    <div class="hobby-item"><i class="fa-solid fa-microchip"></i> Électronique</div>
-                    <div class="hobby-item"><i class="fa-solid fa-server"></i> Serveurs</div>
-                    <div class="hobby-item"><i class="fa-solid fa-screwdriver-wrench"></i> Soudage</div>
-                    <div class="hobby-item"><i class="fa-solid fa-seedling"></i> Hydroponie</div>
-                    <div class="hobby-item"><i class="fa-solid fa-gamepad"></i> Jeux vidéo</div>
-                    <div class="hobby-item"><i class="fa-solid fa-sliders"></i> Mixage</div>
-                    <div class="hobby-item"><i class="fa-solid fa-palette"></i> Dessin PAO</div>
-                    <div class="hobby-item"><i class="fa-solid fa-helicopter"></i> Drone</div>
-                    <div class="hobby-item"><i class="fa-solid fa-cube"></i> 3D</div>
-                    <div class="hobby-item"><i class="fa-solid fa-fish"></i> Aquariophilie</div>
-                    <div class="hobby-item"><i class="fa-solid fa-car-burst"></i> Mécanique</div>
+                <div class="glass-card">
+                    <h2><i class="fa-solid fa-heart"></i> Passions & Hobbies</h2>
+                    <p>Quand je ne suis pas devant un écran, voici ce qui m'occupe :</p>
+                    <div class="hobbies-grid">
+                        <div class="hobby-item"><i class="fa-solid fa-microchip"></i> Électronique [cite: 72]</div>
+                        <div class="hobby-item"><i class="fa-solid fa-server"></i> Serveurs [cite: 75]</div>
+                        <div class="hobby-item"><i class="fa-solid fa-screwdriver-wrench"></i> Soudage [cite: 77]</div>
+                        <div class="hobby-item"><i class="fa-solid fa-seedling"></i> Hydroponie [cite: 80]</div>
+                        <div class="hobby-item"><i class="fa-solid fa-gamepad"></i> Jeux vidéo [cite: 81]</div>
+                        <div class="hobby-item"><i class="fa-solid fa-sliders"></i> Mixage [cite: 82]</div>
+                        <div class="hobby-item"><i class="fa-solid fa-palette"></i> Dessin PAO [cite: 83]</div>
+                        <div class="hobby-item"><i class="fa-solid fa-helicopter"></i> Drone [cite: 84]</div>
+                        <div class="hobby-item"><i class="fa-solid fa-cube"></i> 3D [cite: 85]</div>
+                        <div class="hobby-item"><i class="fa-solid fa-fish"></i> Aquariophilie [cite: 86]</div>
+                        <div class="hobby-item"><i class="fa-solid fa-car-burst"></i> Mécanique [cite: 86]</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Resources Section -->
-        <section id="ressources" class="section-standard section-alt">
+        <section id="ressources" class="section-standard">
             <div class="container">
-                <h2><i class="fa-solid fa-book-open-reader"></i> Ressources & Apprentissage</h2>
-                <p>Je suis toujours en train d'apprendre. Voici quelques-unes des plateformes que j'utilise :</p>
-                <ul class="ressources-list">
-                    <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> - Pour des
-                        certifications web et Python.</li>
-                    <li><a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a> - Un parcours
-                        complet pour le Full Stack.</li>
-                    <li><a href="https://developer.mozilla.org/fr/" target="_blank">MDN Web Docs</a> - La référence pour
-                        le HTML/CSS/JS.</li>
-                    <li><a href="https://github.com/public-apis/public-apis" target="_blank">Public APIs</a> - Une liste
-                        d'APIs pour s'entraîner.</li>
-                </ul>
+                <div class="glass-card">
+                    <h2><i class="fa-solid fa-book-open-reader"></i> Ressources & Apprentissage</h2>
+                    <p>Je suis toujours en train d'apprendre. Voici quelques-unes des plateformes que j'utilise :</p>
+                    <ul class="ressources-list">
+                        <li><a href="cheatsheet.html" target="_blank" class="highlight-link"><i
+                                    class="fa-solid fa-code"></i> Ma Cheat Sheet de Code</a> - Mes bouts de code utiles.
+                        </li>
+                        <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> - Pour des
+                            certifications web et Python.</li>
+                        <li><a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a> - Un parcours
+                            complet pour le Full Stack.</li>
+                        <li><a href="https://developer.mozilla.org/fr/" target="_blank">MDN Web Docs</a> - La référence
+                            pour le HTML/CSS/JS.</li>
+                        <li><a href="https://github.com/public-apis/public-apis" target="_blank">Public APIs</a> - Une
+                            liste d'APIs pour s'entraîner.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <!-- Fun Section -->
         <section id="section-fun" class="section-standard">
             <div class="container">
-                <h2><i class="fa-solid fa-wand-magic-sparkles"></i> Juste pour le fun</h2>
-                <div class="fun-grid">
-                    <div class="fun-item visitor-counter">
-                        <p>Vous êtes le visiteur numéro :</p>
-                        <span id="visitor-count">...</span>
+                <div class="glass-card">
+                    <h2><i class="fa-solid fa-wand-magic-sparkles"></i> Zone Arcade</h2>
+                    <div class="fun-grid">
+                        <div class="fun-item visitor-counter">
+                            <p>Visiteur n°</p>
+                            <span id="visitor-count">...</span>
+                        </div>
+                        <div class="fun-item game-container">
+                            <h3><i class="fa-solid fa-rocket"></i> Space Defender</h3>
+                            <p>Défendez la galaxie ! (Cliquez pour jouer)</p>
+                            <canvas id="game-canvas" width="400" height="300"></canvas>
+                            <button id="start-game-btn" class="btn btn-primary">Jouer</button>
+                        </div>
                     </div>
-                    <a href="https://www.goodboydigital.com/pixijs/storm-of-bullets/" target="_blank"
-                        class="fun-item game-link">
-                        <i class="fa-solid fa-gamepad"></i>
-                        <h3>Pause Jeu</h3>
-                        <p>Tester un mini-jeu web (démo PixiJS)</p>
-                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section-standard section-alt">
+        <section id="contact" class="section-standard">
             <div class="container">
-                <h2><i class="fa-solid fa-envelope"></i> Contactez-moi</h2>
-                <p>À la recherche d'un stage ou simplement pour discuter, n'hésitez pas à me contacter.</p>
-                <div class="contact-flex">
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group"><label for="name">Nom</label><input type="text" id="name" name="name"
-                                required></div>
-                        <div class="form-group"><label for="email">E-mail</label><input type="email" id="email"
-                                name="email" required></div>
-                        <div class="form-group"><label for="message">Message</label><textarea id="message"
-                                name="message" rows="5" required></textarea></div>
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
-                    </form>
-                    <div class="contact-reseaux">
-                        <h3>Mes réseaux</h3>
-                        <p>Retrouvez-moi aussi ici :</p>
-                        <div class="social-links">
-                            <!-- TODO: Add actual GitHub and LinkedIn URLs -->
-                            <a href="#" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                            <a href="#" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <div class="glass-card">
+                    <h2><i class="fa-solid fa-envelope"></i> Contactez-moi</h2>
+                    <p>À la recherche d'un stage ou simplement pour discuter, n'hésitez pas à me contacter.</p>
+                    <div class="contact-flex">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group"><label for="name">Nom</label><input type="text" id="name"
+                                    name="name" required></div>
+                            <div class="form-group"><label for="email">E-mail</label><input type="email" id="email"
+                                    name="email" required></div>
+                            <div class="form-group"><label for="message">Message</label><textarea id="message"
+                                    name="message" rows="5" required></textarea></div>
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </form>
+                        <div class="contact-reseaux">
+                            <h3>Mes réseaux</h3>
+                            <p>Retrouvez-moi aussi ici :</p>
+                            <div class="social-links">
+                                <a href="https://github.com/[ton-github]" target="_blank" title="GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="https://linkedin.com/in/[ton-linkedin]" target="_blank" title="LinkedIn"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <br>
+                            <h3>Infos</h3>
+                            <p><i class="fa-solid fa-phone"></i> 07 50 44 99 67 [cite: 4]</p>
+                            <p><i class="fa-solid fa-envelope-open-text"></i> bryan.leclerc04@gmail.com [cite: 5]</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Orsay, France [cite: 6]</p>
                         </div>
-                        <br>
-                        <h3>Infos</h3>
-                        <p><i class="fa-solid fa-phone"></i> 07 50 44 99 67</p>
-                        <p><i class="fa-solid fa-envelope-open-text"></i> bryan.leclerc04@gmail.com</p>
-                        <p><i class="fa-solid fa-location-dot"></i> Orsay, France</p>
                     </div>
                 </div>
             </div>
@@ -344,15 +400,18 @@
                 <a href="#contact">Contact</a>
             </div>
             <div class="footer-social">
-                <!-- TODO: Add actual GitHub and LinkedIn URLs -->
-                <a href="#" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="#" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/[ton-github]" target="_blank" title="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/[ton-linkedin]" target="_blank" title="LinkedIn"><i
+                        class="fa-brands fa-linkedin"></i></a>
             </div>
             <p>Copyright © 2025 Bryan Leclerc. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
+
+</html>
 
 </html>
